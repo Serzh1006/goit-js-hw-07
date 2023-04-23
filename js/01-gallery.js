@@ -32,7 +32,7 @@ function onClickgetLink(e) {
   const altText = e.target.alt;
   const instance = basicLightbox.create(`
       <div class="modal">
-         <img src="${linkBigImg}" alt="${altText}" width="1280" height="853" />
+         <img src="${linkBigImg}" alt="${altText}" width="1280" height="630" />
       </div>
   `);
 
