@@ -3,6 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 // import * as basicLightbox from "basiclightbox";
 
 // 1. Создание и добавление изображений в список
+
 const galleryList = document.querySelector(".gallery");
 
 function createListImages(galleryItems) {
@@ -28,10 +29,10 @@ function onClickgetLink(e) {
     return;
   }
   const linkBigImg = e.target.dataset.source;
-  const altEl = e.target.alt;
+  const altText = e.target.alt;
   const instance = basicLightbox.create(`
       <div class="modal">
-         <img src="${linkBigImg}" alt="${altEl}" width="800" height="600" />
+         <img src="${linkBigImg}" alt="${altText}" width="1280" height="853" />
       </div>
   `);
 
