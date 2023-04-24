@@ -39,12 +39,16 @@ function onClickgetLink(e) {
   instance.show();
 }
 
-document.addEventListener("keydown", onClickEsc);
+window.addEventListener("keydown", onClickEsc);
 
 function onClickEsc(e) {
   const visible = basicLightbox.visible();
   if (visible && e.code === "Escape") {
     const drop = document.querySelector(".basicLightbox"); //Элемент backdrop
     drop.classList.remove("basicLightbox--visible");
+    removediv(drop);
   }
+}
+function removediv(elem) {
+  elem.remove();
 }
