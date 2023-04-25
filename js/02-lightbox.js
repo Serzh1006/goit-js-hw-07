@@ -19,18 +19,8 @@ galleryList.insertAdjacentHTML("beforeend", listImages);
 
 // 2. Открытие галереи изображений по клику
 
-galleryList.addEventListener("click", onClickgetLink);
-
-function onClickgetLink(e) {
-  e.preventDefault();
-  const clickEl = e.target.nodeName;
-  if (clickEl !== "IMG") {
-    return;
-  }
-
-  const gallery = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionPosition: "bottom",
-    captionDelay: 250,
-  });
-}
+const gallery = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionPosition: "bottom",
+  captionDelay: 250,
+});
